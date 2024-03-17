@@ -12,24 +12,26 @@
 print("Problem 682 Baseball Game")
 
 vars = [
-    (["5","2","C","D","+"], 30),
-    (["5","-2","4","C","D","9","+","+"], 27),
-    (["1","C"], 0),
+    (["5", "2", "C", "D", "+"], 30),
+    (["5", "-2", "4", "C", "D", "9", "+", "+"], 27),
+    (["1", "C"], 0),
 ]
 
+
 def Baseball_Game(ops):
-    symb = ['+', 'D', 'C']
+    symb = ["+", "D", "C"]
     result = []
     for i in range(len(ops)):
         if ops[i] not in symb:
             result.append(int(ops[i]))
-        if ops[i] == '+':
+        if ops[i] == "+":
             result.append(int(result[-1]) + int(result[-2]))
-        if ops[i] == 'D':
+        if ops[i] == "D":
             result.append(int(result[-1]) * 2)
-        if ops[i] == 'C':
+        if ops[i] == "C":
             result.pop()
     return sum(result)
+
 
 for i in vars:
     if Baseball_Game(i[0]) == i[1]:

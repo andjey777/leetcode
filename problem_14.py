@@ -6,9 +6,10 @@
 print("Problem 14 Longest Common Prefix")
 
 vars = [
-    (["flower","flow","flight"], "fl"),
-    (["dog","racecar","car"], ""),
+    (["flower", "flow", "flight"], "fl"),
+    (["dog", "racecar", "car"], ""),
 ]
+
 
 def Longest_Common_Prefix(strs):
     min_len = len(min(strs, key=len))
@@ -19,6 +20,7 @@ def Longest_Common_Prefix(strs):
             if strs[j][i] != symb:
                 return suff
         suff += symb
+
 
 for i in vars:
     if Longest_Common_Prefix(i[0]) == i[1]:

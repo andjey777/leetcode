@@ -14,6 +14,7 @@ vars = [
     ("_R", "R_", False),
 ]
 
+
 def Move_Pieces(start, target):
     lst = list(start)
     length = len(lst)
@@ -25,10 +26,11 @@ def Move_Pieces(start, target):
             if lst[j - 1] == "R" and lst[j] != "R":
                 lst[j] = "R"
                 lst[j - 1] = "_"
-    if ''.join(lst) == target:
+    if "".join(lst) == target:
         return True
     else:
         return False
+
 
 for i in vars:
     if Move_Pieces(i[0], i[1]) == i[2]:

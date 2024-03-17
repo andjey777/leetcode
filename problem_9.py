@@ -10,6 +10,7 @@ vars = [
     (10, False),
 ]
 
+
 def Palindrome_Number(n):
     n = str(n)
     length = len(n)
@@ -17,6 +18,7 @@ def Palindrome_Number(n):
         if n[i] != n[length - i - 1]:
             return False
     return True
+
 
 for i in vars:
     if Palindrome_Number(i[0]) == i[1]:
