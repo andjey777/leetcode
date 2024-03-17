@@ -2,7 +2,9 @@
 #Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 #You may assume that each input would have exactly one solution, and you may not use the same element twice.
 #You can return the answer in any order.
-
+print(123)
+import time
+time.sleep(2)
 nums = [1, 2, 3, 4, 8, 6]
 target = 10
 for i in range(len(nums)):
