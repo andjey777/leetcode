@@ -6,12 +6,12 @@
 # Return true if it is possible to obtain the lsting target by moving the pieces of the lsting lst any number of times. Otherwise, return false.
 
 
-print("Problem 2337 Move Pieces to Obtain a String")
-
 vars = [
     ("_L__R__R_", "L______RR", True),
     ("R_L_", "__LR", False),
     ("_R", "R_", False),
+    ("__L_L_RR_R", "LL_____RRR", True),
+    ("R_L_L_R_", "LL____RR", False),
 ]
 
 
@@ -33,7 +33,5 @@ def Move_Pieces(start, target):
 
 
 for i in vars:
-    if Move_Pieces(i[0], i[1]) == i[2]:
-        print(i, "Success")
-    else:
+    if Move_Pieces(i[0], i[1]) != i[2]:
         raise Exception("Wrong result at", i)

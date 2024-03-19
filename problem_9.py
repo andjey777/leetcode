@@ -2,12 +2,13 @@
 # Given an integer x, return true if x is a palindrome, and false otherwise.
 # https://leetcode.com/problems/palindrome-number/description/
 
-print("Problem 9 Palindrome Number")
 
 vars = [
     (121, True),
     (-121, False),
     (10, False),
+    (12345, False),
+    (1234554321, True),
 ]
 
 
@@ -21,7 +22,5 @@ def Palindrome_Number(n):
 
 
 for i in vars:
-    if Palindrome_Number(i[0]) == i[1]:
-        print(i, "Success")
-    else:
+    if Palindrome_Number(i[0]) != i[1]:
         raise Exception("Wrong result at", i)
