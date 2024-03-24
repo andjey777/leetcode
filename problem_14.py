@@ -3,11 +3,13 @@
 # If there is no common prefix, return an empty string "".
 # https://leetcode.com/problems/longest-common-prefix/description/
 
-
-vars = [
-    (["flower", "flow", "flight"], "fl"),
-    (["dog", "racecar", "car"], ""),
-]
+var = {
+    "input": [
+        ["flower", "flow", "flight"],
+        ["dog", "racecar", "car"],
+    ],
+    "result": ["fl", ""],
+}
 
 
 def Longest_Common_Prefix(strs):
@@ -22,6 +24,6 @@ def Longest_Common_Prefix(strs):
 
 
 def test_prob_14():
-    for i in vars:
-        if Longest_Common_Prefix(i[0]) != i[1]:
-            raise Exception("Wrong result at", i)
+    for i in range(len(var["input"])):
+        if Longest_Common_Prefix(var["input"][i]) != var["result"][i]:
+            raise Exception("Wrong result at dataset #", i)

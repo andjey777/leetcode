@@ -5,14 +5,23 @@
 # The character '_' represents a blank space that can be occupied by any of the 'L' or 'R' pieces.
 # Return true if it is possible to obtain the lsting target by moving the pieces of the lsting lst any number of times. Otherwise, return false.
 
-
-vars = [
-    ("_L__R__R_", "L______RR", True),
-    ("R_L_", "__LR", False),
-    ("_R", "R_", False),
-    ("__L_L_RR_R", "LL_____RRR", True),
-    ("R_L_L_R_", "LL____RR", False),
-]
+var = {
+    "input": [
+        "_L__R__R_",
+        "R_L_",
+        "_R",
+        "__L_L_RR_R",
+        "R_L_L_R_",
+    ],
+    "target": [
+        "L______RR",
+        "__LR",
+        "R_",
+        "LL_____RRR",
+        "LL____RR",
+    ],
+    "result": [True, False, False, True, False],
+}
 
 
 def Move_Pieces(start, target):
@@ -33,6 +42,6 @@ def Move_Pieces(start, target):
 
 
 def test_prob_2337():
-    for i in vars:
-        if Move_Pieces(i[0], i[1]) != i[2]:
-            raise Exception("Wrong result at", i)
+    for i in range(len(var["input"])):
+        if Move_Pieces(var["input"][i], var["target"][i]) != var["result"][i]:
+            raise Exception("Wrong result at dataset #", i)

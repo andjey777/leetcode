@@ -2,14 +2,10 @@
 # Given an integer x, return true if x is a palindrome, and false otherwise.
 # https://leetcode.com/problems/palindrome-number/description/
 
-
-vars = [
-    (121, True),
-    (-121, False),
-    (10, False),
-    (12345, False),
-    (1234554321, True),
-]
+var = {
+    "input": [121, -121, 10, 12345, 1234554321],
+    "result": [True, False, False, False, True],
+}
 
 
 def Palindrome_Number(n):
@@ -22,6 +18,6 @@ def Palindrome_Number(n):
 
 
 def test_prob_9():
-    for i in vars:
-        if Palindrome_Number(i[0]) != i[1]:
-            raise Exception("Wrong result at", i)
+    for i in range(len(var["input"])):
+        if Palindrome_Number(var["input"][i]) != var["result"][i]:
+            raise Exception("Wrong result at dataset #", i)

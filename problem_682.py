@@ -9,14 +9,16 @@
 # The test cases are generated such that the answer and all intermediate calculations fit in a 32-bit integer and that all operations are valid.
 # https://leetcode.com/problems/baseball-game/description/
 
-
-vars = [
-    (["5", "2", "C", "D", "+"], 30),
-    (["5", "-2", "4", "C", "D", "9", "+", "+"], 27),
-    (["1", "C"], 0),
-    (["2", "3", "D", "5", "C", "+", "2"], 22),
-    (["3", "C", "2", "D", "+", "4", "5", "C", "C", "5"], 17),
-]
+var = {
+    "input": [
+        ["5", "2", "C", "D", "+"],
+        ["5", "-2", "4", "C", "D", "9", "+", "+"],
+        ["1", "C"],
+        ["2", "3", "D", "5", "C", "+", "2"],
+        ["3", "C", "2", "D", "+", "4", "5", "C", "C", "5"],
+    ],
+    "result": [30, 27, 0, 22, 17],
+}
 
 
 def Baseball_Game(ops):
@@ -35,6 +37,6 @@ def Baseball_Game(ops):
 
 
 def test_prob_682():
-    for i in vars:
-        if Baseball_Game(i[0]) != i[1]:
-            raise Exception("Wrong result at", i)
+    for i in range(len(var["input"])):
+        if Baseball_Game(var["input"][i]) != var["result"][i]:
+            raise Exception("Wrong result at dataset #", i)
