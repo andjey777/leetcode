@@ -30,3 +30,6 @@ def Two_Sum(nums, target):
 for i in range(len(var["input"])):
     if Two_Sum(var["input"][i], var["target"][i]) != var["result"][i]:
         raise Exception("Wrong result at dataset #", i)
+
+def test_1():
+    print(1)
