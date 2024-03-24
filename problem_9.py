@@ -21,6 +21,7 @@ def Palindrome_Number(n):
     return True
 
 
-for i in vars:
-    if Palindrome_Number(i[0]) != i[1]:
-        raise Exception("Wrong result at", i)
+def test_prob_9():
+    for i in vars:
+        if Palindrome_Number(i[0]) != i[1]:
+            raise Exception("Wrong result at", i)

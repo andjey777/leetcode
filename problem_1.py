@@ -26,6 +26,7 @@ def Two_Sum(nums, target):
             if nums[i] + nums[j] == target:
                 return [i, j]
 
+
 def test_prob_1():
     for i in range(len(var["input"])):
         if Two_Sum(var["input"][i], var["target"][i]) != var["result"][i]:

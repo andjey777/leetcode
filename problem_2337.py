@@ -32,6 +32,7 @@ def Move_Pieces(start, target):
         return False
 
 
-for i in vars:
-    if Move_Pieces(i[0], i[1]) != i[2]:
-        raise Exception("Wrong result at", i)
+def test_prob_2337():
+    for i in vars:
+        if Move_Pieces(i[0], i[1]) != i[2]:
+            raise Exception("Wrong result at", i)

@@ -34,6 +34,7 @@ def Baseball_Game(ops):
     return sum(result)
 
 
-for i in vars:
-    if Baseball_Game(i[0]) != i[1]:
-        raise Exception("Wrong result at", i)
+def test_prob_682():
+    for i in vars:
+        if Baseball_Game(i[0]) != i[1]:
+            raise Exception("Wrong result at", i)

@@ -21,6 +21,7 @@ def Longest_Common_Prefix(strs):
         suff += symb
 
 
-for i in vars:
-    if Longest_Common_Prefix(i[0]) != i[1]:
-        raise Exception("Wrong result at", i)
+def test_prob_14():
+    for i in vars:
+        if Longest_Common_Prefix(i[0]) != i[1]:
+            raise Exception("Wrong result at", i)
