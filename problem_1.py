@@ -26,10 +26,7 @@ def Two_Sum(nums, target):
             if nums[i] + nums[j] == target:
                 return [i, j]
 
-
-for i in range(len(var["input"])):
-    if Two_Sum(var["input"][i], var["target"][i]) != var["result"][i]:
-        raise Exception("Wrong result at dataset #", i)
-
-def test_1():
-    print(1)
+def test_prob_1():
+    for i in range(len(var["input"])):
+        if Two_Sum(var["input"][i], var["target"][i]) != var["result"][i]:
+            raise Exception("Wrong result at dataset #", i)
