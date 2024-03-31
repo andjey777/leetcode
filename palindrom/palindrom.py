@@ -1,3 +1,8 @@
+# 9. Palindrome Number
+# Given an integer x, return true if x is a palindrome, and false otherwise.
+# https://leetcode.com/problems/palindrome-number/description/
+
+
 def Palindrome_Number(n: int):
     n = str(n)
     length = len(n)
